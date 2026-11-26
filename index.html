@@ -162,11 +162,108 @@
       </div>
     </section>
 
-    <!-- Individual Member Financial Summary -->
+    <!-- Expenses Paid by Each Member Overview -->
+    <section class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 space-y-4 print-card">
+      <div class="border-b border-slate-200 pb-3">
+        <h2 class="text-base font-bold text-slate-900">Expenses Paid by Each Member</h2>
+        <p class="text-xs text-slate-500">Detailed list of bills paid and fronted by each participant.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-3.5">
+        <!-- Bhagya -->
+        <div class="p-4 rounded-xl border border-slate-200 bg-slate-50/60 space-y-2">
+          <div class="flex items-center justify-between pb-2 border-b border-slate-200">
+            <span class="font-bold text-sm text-slate-900">Bhagya</span>
+            <span class="mono font-bold text-sm text-indigo-700">Total Paid: LKR 45,768.00</span>
+          </div>
+          <ul class="text-xs space-y-1.5 text-slate-700">
+            <li class="flex justify-between">
+              <span>Beers Round 1 (4 Bottles)</span>
+              <span class="mono font-medium">LKR 7,392.00</span>
+            </li>
+            <li class="flex justify-between">
+              <span>Red Bull</span>
+              <span class="mono font-medium">LKR 2,376.00</span>
+            </li>
+            <li class="flex justify-between">
+              <span>Tequila Shots (18 Shots)</span>
+              <span class="mono font-medium">LKR 36,000.00</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Tharusha -->
+        <div class="p-4 rounded-xl border border-slate-200 bg-slate-50/60 space-y-2">
+          <div class="flex items-center justify-between pb-2 border-b border-slate-200">
+            <span class="font-bold text-sm text-slate-900">Tharusha</span>
+            <span class="mono font-bold text-sm text-indigo-700">Total Paid: LKR 14,770.00</span>
+          </div>
+          <ul class="text-xs space-y-1.5 text-slate-700">
+            <li class="flex justify-between">
+              <span>Van Transport (Hokandara to Chillers)</span>
+              <span class="mono font-medium">LKR 3,043.00</span>
+            </li>
+            <li class="flex justify-between">
+              <span>Entrance Fee</span>
+              <span class="mono font-medium">LKR 6,000.00</span>
+            </li>
+            <li class="flex justify-between">
+              <span>Beers Round 3 (2 Bottles)</span>
+              <span class="mono font-medium">LKR 3,696.00</span>
+            </li>
+            <li class="flex justify-between">
+              <span>Taxi: Galle Face to Rajagiriya</span>
+              <span class="mono font-medium">LKR 735.00</span>
+            </li>
+            <li class="flex justify-between">
+              <span>Taxi: Rajagiriya to Hokandara</span>
+              <span class="mono font-medium">LKR 1,296.00</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Dinesh -->
+        <div class="p-4 rounded-xl border border-slate-200 bg-slate-50/60 space-y-2">
+          <div class="flex items-center justify-between pb-2 border-b border-slate-200">
+            <span class="font-bold text-sm text-slate-900">Dinesh</span>
+            <span class="mono font-bold text-sm text-indigo-700">Total Paid: LKR 6,696.00</span>
+          </div>
+          <ul class="text-xs space-y-1.5 text-slate-700">
+            <li class="flex justify-between">
+              <span>Beers Round 2 (3 Bottles)</span>
+              <span class="mono font-medium">LKR 6,696.00</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Rashini & Piyumi -->
+        <div class="p-4 rounded-xl border border-slate-200 bg-slate-50/60 space-y-3">
+          <div>
+            <div class="flex items-center justify-between pb-1.5 border-b border-slate-200">
+              <span class="font-bold text-sm text-slate-900">Rashini</span>
+              <span class="mono font-bold text-sm text-indigo-700">Total Paid: LKR 1,848.00</span>
+            </div>
+            <div class="flex justify-between text-xs text-slate-700 pt-1.5">
+              <span>Beer (1 Bottle)</span>
+              <span class="mono font-medium">LKR 1,848.00</span>
+            </div>
+          </div>
+          <div>
+            <div class="flex items-center justify-between pb-1.5 border-b border-slate-200">
+              <span class="font-bold text-sm text-slate-900">Piyumi</span>
+              <span class="mono font-bold text-sm text-slate-500">Total Paid: LKR 0.00</span>
+            </div>
+            <p class="text-xs text-slate-400 italic pt-1">No direct bills paid</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Individual Member Financial Summary Table -->
     <section class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden print-card">
       <div class="px-5 py-4 border-b border-slate-200">
         <h2 class="text-base font-bold text-slate-900">Member Financial Balances</h2>
-        <p class="text-xs text-slate-500">Total amount paid by each person versus their actual consumption share.</p>
+        <p class="text-xs text-slate-500">Comparison of total amount paid versus actual consumption share.</p>
       </div>
 
       <div class="overflow-x-auto">
@@ -250,23 +347,7 @@
       </div>
     </section>
 
-    <!-- Interactive Personal Bill Explorer (no-print) -->
-    <section class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 space-y-4 no-print">
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-200 pb-3">
-        <div>
-          <h2 class="text-base font-bold text-slate-900">Personal Itemized Statement</h2>
-          <p class="text-xs text-slate-500">Select any member to inspect their itemized payments and consumption shares.</p>
-        </div>
-      </div>
-
-      <!-- Member Selector Tabs -->
-      <div class="flex flex-wrap gap-2" id="memberButtons"></div>
-
-      <!-- Detail Card -->
-      <div id="memberDetailCard" class="p-4 rounded-xl border border-slate-200 bg-slate-50/50"></div>
-    </section>
-
-    <!-- All Outing Expenses Table -->
+    <!-- Complete Outing Expenses Table -->
     <section class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden print-card">
       <div class="px-5 py-4 border-b border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
         <div>
@@ -319,100 +400,6 @@
   </div>
 
   <script>
-    const members = {
-      "Rashini": {
-        paid: 1848.00,
-        share: 15024.35,
-        net: -13176.35,
-        paidItems: [{ item: "1 Beer", amount: 1848.00 }],
-        consumedItems: [
-          { item: "Van Transport to Chillers (1/5 share)", amount: 608.60 },
-          { item: "Beers Round 1 (1/4 share)", amount: 1848.00 },
-          { item: "Tequila Shots 18 Nos (1/4 share)", amount: 9000.00 },
-          { item: "Beers Round 2 (1/4 share)", amount: 1674.00 },
-          { item: "Beers Round 3 (1/4 share)", amount: 924.00 },
-          { item: "1 Beer (1/4 share)", amount: 462.00 },
-          { item: "Taxi: Galle Face to Rajagiriya (1/4 share)", amount: 183.75 },
-          { item: "Taxi: Rajagiriya to Hokandara (1/4 share)", amount: 324.00 }
-        ],
-        settlement: "Pay LKR 13,176.35 directly to Bhagya"
-      },
-      "Piyumi": {
-        paid: 0.00,
-        share: 15024.35,
-        net: -15024.35,
-        paidItems: [],
-        consumedItems: [
-          { item: "Van Transport to Chillers (1/5 share)", amount: 608.60 },
-          { item: "Beers Round 1 (1/4 share)", amount: 1848.00 },
-          { item: "Tequila Shots 18 Nos (1/4 share)", amount: 9000.00 },
-          { item: "Beers Round 2 (1/4 share)", amount: 1674.00 },
-          { item: "Beers Round 3 (1/4 share)", amount: 924.00 },
-          { item: "1 Beer (1/4 share)", amount: 462.00 },
-          { item: "Taxi: Galle Face to Rajagiriya (1/4 share)", amount: 183.75 },
-          { item: "Taxi: Rajagiriya to Hokandara (1/4 share)", amount: 324.00 }
-        ],
-        settlement: "Pay LKR 6,746.70 to Bhagya & LKR 8,277.65 to Tharusha"
-      },
-      "Bhagya": {
-        paid: 45768.00,
-        share: 15024.35,
-        net: 30743.65,
-        paidItems: [
-          { item: "Beers Round 1 (4 Bottles)", amount: 7392.00 },
-          { item: "Red Bull (Tharusha)", amount: 2376.00 },
-          { item: "Tequila Shots (18 Shots)", amount: 36000.00 }
-        ],
-        consumedItems: [
-          { item: "Van Transport to Chillers (1/5 share)", amount: 608.60 },
-          { item: "Beers Round 1 (1/4 share)", amount: 1848.00 },
-          { item: "Tequila Shots 18 Nos (1/4 share)", amount: 9000.00 },
-          { item: "Beers Round 2 (1/4 share)", amount: 1674.00 },
-          { item: "Beers Round 3 (1/4 share)", amount: 924.00 },
-          { item: "1 Beer (1/4 share)", amount: 462.00 },
-          { item: "Taxi: Galle Face to Rajagiriya (1/4 share)", amount: 183.75 },
-          { item: "Taxi: Rajagiriya to Hokandara (1/4 share)", amount: 324.00 }
-        ],
-        settlement: "Receives LKR 13,176.35 from Rashini, LKR 10,820.60 from Dinesh, and LKR 6,746.70 from Piyumi"
-      },
-      "Dinesh": {
-        paid: 6696.00,
-        share: 17516.60,
-        net: -10820.60,
-        paidItems: [{ item: "Beers Round 2 (3 Bottles)", amount: 6696.00 }],
-        consumedItems: [
-          { item: "Van Transport to Chillers (1/5 share)", amount: 608.60 },
-          { item: "Entrance Fee (1/2 share)", amount: 3000.00 },
-          { item: "Beers Round 1 (1/4 share)", amount: 1848.00 },
-          { item: "Tequila Shots 18 Nos (1/4 share)", amount: 9000.00 },
-          { item: "Beers Round 2 (1/4 share)", amount: 1674.00 },
-          { item: "Beers Round 3 (1/4 share)", amount: 924.00 },
-          { item: "1 Beer (1/4 share)", amount: 462.00 }
-        ],
-        settlement: "Pay LKR 10,820.60 directly to Bhagya"
-      },
-      "Tharusha": {
-        paid: 14770.00,
-        share: 6492.35,
-        net: 8277.65,
-        paidItems: [
-          { item: "Hokandara to Chillers Room (Van)", amount: 3043.00 },
-          { item: "Entrance Fee", amount: 6000.00 },
-          { item: "Beers Round 3 (2 Bottles)", amount: 3696.00 },
-          { item: "Taxi: Galle Face to Rajagiriya", amount: 735.00 },
-          { item: "Taxi: Rajagiriya to Hokandara", amount: 1296.00 }
-        ],
-        consumedItems: [
-          { item: "Van Transport to Chillers (1/5 share)", amount: 608.60 },
-          { item: "Entrance Fee (1/2 share)", amount: 3000.00 },
-          { item: "Red Bull (Individual)", amount: 2376.00 },
-          { item: "Taxi: Galle Face to Rajagiriya (1/4 share)", amount: 183.75 },
-          { item: "Taxi: Rajagiriya to Hokandara (1/4 share)", amount: 324.00 }
-        ],
-        settlement: "Receives LKR 8,277.65 from Piyumi"
-      }
-    };
-
     const expenses = [
       { id: 1, desc: "Hokandara to Chillers Room (Van Transport)", cat: "Transport", total: 3043.00, paidBy: "Tharusha", shared: "All 5" },
       { id: 2, desc: "Entrance Fee", cat: "Entrance", total: 6000.00, paidBy: "Tharusha", shared: "Dinesh, Tharusha" },
@@ -425,97 +412,6 @@
       { id: 9, desc: "Taxi: Galle Face to Rajagiriya", cat: "Transport", total: 735.00, paidBy: "Tharusha", shared: "Rashini, Tharusha, Bhagya, Piyumi" },
       { id: 10, desc: "Taxi: Rajagiriya to Hokandara", cat: "Transport", total: 1296.00, paidBy: "Tharusha", shared: "Rashini, Tharusha, Bhagya, Piyumi" },
     ];
-
-    let currentMember = "Rashini";
-
-    function renderMemberButtons() {
-      const container = document.getElementById('memberButtons');
-      container.innerHTML = Object.keys(members).map(name => {
-        const m = members[name];
-        const isSelected = name === currentMember;
-        const isOwed = m.net > 0;
-        const buttonClass = isSelected 
-          ? 'bg-indigo-600 text-white shadow-sm' 
-          : 'bg-white hover:bg-slate-100 text-slate-700 border border-slate-200';
-
-        return `
-          <button onclick="selectMember('${name}')" class="px-3.5 py-2 rounded-xl text-xs font-semibold flex items-center gap-2 transition ${buttonClass}">
-            <span>${name}</span>
-            <span class="mono text-[11px] px-1.5 py-0.5 rounded ${isSelected ? 'bg-white/20 text-white' : isOwed ? 'bg-emerald-50 text-emerald-700' : 'bg-rose-50 text-rose-700'}">
-              ${isOwed ? '+' : ''}${Math.round(m.net).toLocaleString()}
-            </span>
-          </button>
-        `;
-      }).join('');
-    }
-
-    function selectMember(name) {
-      currentMember = name;
-      renderMemberButtons();
-      renderMemberDetail();
-    }
-
-    function renderMemberDetail() {
-      const m = members[currentMember];
-      const isReimbursed = m.net > 0;
-      const card = document.getElementById('memberDetailCard');
-
-      card.innerHTML = `
-        <div class="space-y-3">
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-slate-200">
-            <div>
-              <div class="flex items-center gap-2">
-                <span class="font-bold text-sm text-slate-900">${currentMember}</span>
-                <span class="text-[11px] font-semibold px-2 py-0.5 rounded ${isReimbursed ? 'bg-emerald-50 text-emerald-700 border border-emerald-200' : 'bg-rose-50 text-rose-700 border border-rose-200'}">
-                  ${isReimbursed ? 'Gets Reimbursed' : 'Needs to Pay'}
-                </span>
-              </div>
-              <p class="text-xs text-slate-500 mt-0.5">${m.settlement}</p>
-            </div>
-            <div class="text-left sm:text-right">
-              <span class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold block">Net Amount</span>
-              <span class="mono font-bold text-lg ${isReimbursed ? 'text-emerald-600' : 'text-rose-600'}">
-                LKR ${Math.abs(m.net).toLocaleString('en-US', {minimumFractionDigits: 2})}
-              </span>
-            </div>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
-            <div class="p-3 rounded-lg bg-white border border-slate-200">
-              <div class="flex justify-between font-semibold text-slate-700 pb-2 border-b border-slate-100">
-                <span>Paid by ${currentMember}</span>
-                <span class="mono font-bold text-slate-900">LKR ${m.paid.toLocaleString('en-US', {minimumFractionDigits: 2})}</span>
-              </div>
-              ${m.paidItems.length === 0 ? '<div class="py-2 text-slate-400 italic">No direct expenses paid</div>' : `
-                <ul class="divide-y divide-slate-100 pt-1">
-                  ${m.paidItems.map(item => `
-                    <li class="py-1.5 flex justify-between">
-                      <span class="text-slate-600">${item.item}</span>
-                      <span class="mono font-medium text-slate-900">LKR ${item.amount.toLocaleString('en-US', {minimumFractionDigits: 2})}</span>
-                    </li>
-                  `).join('')}
-                </ul>
-              `}
-            </div>
-
-            <div class="p-3 rounded-lg bg-white border border-slate-200">
-              <div class="flex justify-between font-semibold text-slate-700 pb-2 border-b border-slate-100">
-                <span>Actual Share Owed</span>
-                <span class="mono font-bold text-slate-900">LKR ${m.share.toLocaleString('en-US', {minimumFractionDigits: 2})}</span>
-              </div>
-              <ul class="divide-y divide-slate-100 pt-1 max-h-48 overflow-y-auto pr-1">
-                ${m.consumedItems.map(item => `
-                  <li class="py-1.5 flex justify-between">
-                    <span class="text-slate-600">${item.item}</span>
-                    <span class="mono font-medium text-slate-900">LKR ${item.amount.toLocaleString('en-US', {minimumFractionDigits: 2})}</span>
-                  </li>
-                `).join('')}
-              </ul>
-            </div>
-          </div>
-        </div>
-      `;
-    }
 
     function renderExpenseTable() {
       const cat = document.getElementById('categoryFilter').value;
@@ -555,6 +451,27 @@ DIRECT TRANSFERS:
 3. Piyumi   → pays Bhagya   : LKR 6,746.70
 4. Piyumi   → pays Tharusha : LKR 8,277.65
 
+EXPENSES PAID BY EACH MEMBER:
+• Bhagya (Paid LKR 45,768.00):
+  - Beers Round 1 (4 Bottles): LKR 7,392.00
+  - Red Bull: LKR 2,376.00
+  - Tequila Shots (18 Shots): LKR 36,000.00
+
+• Tharusha (Paid LKR 14,770.00):
+  - Van Transport: LKR 3,043.00
+  - Entrance Fee: LKR 6,000.00
+  - Beers Round 3 (2 Bottles): LKR 3,696.00
+  - Taxi GF to Rajagiriya: LKR 735.00
+  - Taxi Rajagiriya to Hokandara: LKR 1,296.00
+
+• Dinesh (Paid LKR 6,696.00):
+  - Beers Round 2 (3 Bottles): LKR 6,696.00
+
+• Rashini (Paid LKR 1,848.00):
+  - Beer (1 Bottle): LKR 1,848.00
+
+• Piyumi (Paid LKR 0.00)
+
 MEMBER BALANCES:
 • Bhagya   : Paid LKR 45,768.00 | Share LKR 15,024.35 | Net: +LKR 30,743.65 (Reimburse)
 • Tharusha : Paid LKR 14,770.00 | Share LKR 6,492.35  | Net: +LKR 8,277.65 (Reimburse)
@@ -573,8 +490,6 @@ MEMBER BALANCES:
       });
     }
 
-    renderMemberButtons();
-    renderMemberDetail();
     renderExpenseTable();
   </script>
 </body>
