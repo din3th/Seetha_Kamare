@@ -1,0 +1,5 @@
+.DS_Store
+~$*.xlsx
+*.py
+__pycache__/
+.vercel

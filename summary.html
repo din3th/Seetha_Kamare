@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settlement Statement — Seetha Kamare Outing</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+    .mono { font-family: 'JetBrains Mono', monospace; }
+    @media print {
+      body { background: white !important; padding: 0 !important; }
+      .no-print { display: none !important; }
+      .sheet { box-shadow: none !important; border: 1px solid #cbd5e1 !important; margin: 0 !important; max-width: 100% !important; border-radius: 0 !important; }
+    }
+  </style>
+</head>
+<body class="bg-slate-100 text-slate-900 min-h-screen py-6 sm:py-10 px-4 antialiased">
+
+  <!-- Top Action Bar -->
+  <div class="max-w-3xl mx-auto mb-4 flex items-center justify-between no-print">
+    <a href="index.html" class="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-600 hover:text-slate-900">
+      &larr; Back to Full Dashboard
+    </a>
+    <div class="flex items-center gap-2">
+      <button onclick="window.print()" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-slate-200 hover:bg-slate-50 text-slate-700 text-xs font-semibold shadow-sm transition">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+        Print / Save PDF
+      </button>
+      <button onclick="copySummaryText()" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold shadow-sm transition">
+        <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.299.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.087-.179.18-.077.355.101.174.45 0.742.965 1.202.664.593 1.224.777 1.397.864.173.087.275.072.376-.043.101-.116.433-.506.549-.679.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.043.072.043.419-.101.824z"/></svg>
+        Copy Text
+      </button>
+    </div>
+  </div>
+
+  <!-- One-Page Statement Sheet -->
+  <div class="sheet max-w-3xl mx-auto bg-white rounded-2xl border border-slate-200 shadow-xl overflow-hidden p-6 sm:p-8 space-y-6">
+
+    <!-- Statement Header -->
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-200 pb-5">
+      <div>
+        <div class="flex items-center gap-2">
+          <span class="text-xl">🌴</span>
+          <h1 class="text-xl font-extrabold text-slate-900 tracking-tight">Seetha Kamare Outing</h1>
+        </div>
+        <p class="text-xs text-slate-500 font-medium mt-1">Official Expense Settlement Statement &bull; 5 Participants</p>
+      </div>
+      <div class="text-left sm:text-right">
+        <span class="text-[10px] uppercase font-bold text-slate-400 tracking-wider">Total Outing Expense</span>
+        <div class="text-2xl font-black text-slate-900 mono">LKR 69,082.00</div>
+        <span class="inline-block mt-0.5 text-[11px] font-semibold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
+          Reconciled (Net Balance: LKR 0.00)
+        </span>
+      </div>
+    </div>
+
+    <!-- Direct Payments Section -->
+    <div class="space-y-3">
+      <div class="flex items-center justify-between">
+        <h2 class="text-xs font-bold uppercase tracking-wider text-slate-500">Required Direct Transfers</h2>
+        <span class="text-xs text-slate-400">4 Direct Payments</span>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <!-- 1 -->
+        <div class="p-3.5 rounded-xl border border-slate-200 bg-slate-50/70 flex items-center justify-between">
+          <div>
+            <div class="text-xs text-slate-500">Transfer #1</div>
+            <div class="text-sm font-bold text-slate-900">Rashini <span class="text-slate-400 font-normal">→ pays →</span> Bhagya</div>
+          </div>
+          <div class="text-right">
+            <div class="text-sm font-bold mono text-slate-900">LKR 13,176.35</div>
+            <span class="text-[10px] font-bold text-rose-600">Pending</span>
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="p-3.5 rounded-xl border border-slate-200 bg-slate-50/70 flex items-center justify-between">
+          <div>
+            <div class="text-xs text-slate-500">Transfer #2</div>
+            <div class="text-sm font-bold text-slate-900">Dinesh <span class="text-slate-400 font-normal">→ pays →</span> Bhagya</div>
+          </div>
+          <div class="text-right">
+            <div class="text-sm font-bold mono text-slate-900">LKR 10,820.60</div>
+            <span class="text-[10px] font-bold text-rose-600">Pending</span>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="p-3.5 rounded-xl border border-slate-200 bg-slate-50/70 flex items-center justify-between">
+          <div>
+            <div class="text-xs text-slate-500">Transfer #3</div>
+            <div class="text-sm font-bold text-slate-900">Piyumi <span class="text-slate-400 font-normal">→ pays →</span> Bhagya</div>
+          </div>
+          <div class="text-right">
+            <div class="text-sm font-bold mono text-slate-900">LKR 6,746.70</div>
+            <span class="text-[10px] font-bold text-rose-600">Pending</span>
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="p-3.5 rounded-xl border border-slate-200 bg-slate-50/70 flex items-center justify-between">
+          <div>
+            <div class="text-xs text-slate-500">Transfer #4</div>
+            <div class="text-sm font-bold text-slate-900">Piyumi <span class="text-slate-400 font-normal">→ pays →</span> Tharusha</div>
+          </div>
+          <div class="text-right">
+            <div class="text-sm font-bold mono text-slate-900">LKR 8,277.65</div>
+            <span class="text-[10px] font-bold text-rose-600">Pending</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Settlement Table -->
+    <div class="space-y-3">
+      <h2 class="text-xs font-bold uppercase tracking-wider text-slate-500">Individual Participant Breakdown</h2>
+
+      <div class="border border-slate-200 rounded-xl overflow-hidden">
+        <table class="w-full text-left text-xs sm:text-sm">
+          <thead class="bg-slate-50 text-slate-600 font-semibold border-b border-slate-200">
+            <tr>
+              <th class="py-2.5 px-3">Participant</th>
+              <th class="py-2.5 px-3 text-right">Total Paid</th>
+              <th class="py-2.5 px-3 text-right">Total Share</th>
+              <th class="py-2.5 px-3 text-right">Net Settlement</th>
+              <th class="py-2.5 px-3 text-center">Action Required</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100">
+            <tr>
+              <td class="py-2.5 px-3 font-semibold text-slate-900">Bhagya</td>
+              <td class="py-2.5 px-3 text-right mono text-slate-700">LKR 45,768.00</td>
+              <td class="py-2.5 px-3 text-right mono text-slate-700">LKR 15,024.35</td>
+              <td class="py-2.5 px-3 text-right mono font-bold text-emerald-600">+LKR 30,743.65</td>
+              <td class="py-2.5 px-3 text-center">
+                <span class="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">Receives LKR 30,743.65</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="py-2.5 px-3 font-semibold text-slate-900">Tharusha</td>
+              <td class="py-2.5 px-3 text-right mono text-slate-700">LKR 14,770.00</td>
+              <td class="py-2.5 px-3 text-right mono text-slate-700">LKR 6,492.35</td>
+              <td class="py-2.5 px-3 text-right mono font-bold text-emerald-600">+LKR 8,277.65</td>
+              <td class="py-2.5 px-3 text-center">
+                <span class="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">Receives LKR 8,277.65</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="py-2.5 px-3 font-semibold text-slate-900">Rashini</td>
+              <td class="py-2.5 px-3 text-right mono text-slate-700">LKR 1,848.00</td>
+              <td class="py-2.5 px-3 text-right mono text-slate-700">LKR 15,024.35</td>
+              <td class="py-2.5 px-3 text-right mono font-bold text-rose-600">-LKR 13,176.35</td>
+              <td class="py-2.5 px-3 text-center">
+                <span class="text-[11px] font-semibold text-rose-700 bg-rose-50 px-2 py-0.5 rounded border border-rose-200">Pays LKR 13,176.35</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="py-2.5 px-3 font-semibold text-slate-900">Dinesh</td>
+              <td class="py-2.5 px-3 text-right mono text-slate-700">LKR 6,696.00</td>
+              <td class="py-2.5 px-3 text-right mono text-slate-700">LKR 17,516.60</td>
+              <td class="py-2.5 px-3 text-right mono font-bold text-rose-600">-LKR 10,820.60</td>
+              <td class="py-2.5 px-3 text-center">
+                <span class="text-[11px] font-semibold text-rose-700 bg-rose-50 px-2 py-0.5 rounded border border-rose-200">Pays LKR 10,820.60</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="py-2.5 px-3 font-semibold text-slate-900">Piyumi</td>
+              <td class="py-2.5 px-3 text-right mono text-slate-700">LKR 0.00</td>
+              <td class="py-2.5 px-3 text-right mono text-slate-700">LKR 15,024.35</td>
+              <td class="py-2.5 px-3 text-right mono font-bold text-rose-600">-LKR 15,024.35</td>
+              <td class="py-2.5 px-3 text-center">
+                <span class="text-[11px] font-semibold text-rose-700 bg-rose-50 px-2 py-0.5 rounded border border-rose-200">Pays LKR 15,024.35</span>
+              </td>
+            </tr>
+          </tbody>
+          <tfoot class="bg-slate-100 font-bold text-slate-900 border-t-2 border-slate-300">
+            <tr>
+              <td class="py-2.5 px-3">TOTAL</td>
+              <td class="py-2.5 px-3 text-right mono">LKR 69,082.00</td>
+              <td class="py-2.5 px-3 text-right mono">LKR 69,082.00</td>
+              <td class="py-2.5 px-3 text-right mono text-slate-500">LKR 0.00</td>
+              <td class="py-2.5 px-3 text-center text-xs text-slate-500">100% Balanced</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+
+    <!-- Category Expense Summary -->
+    <div class="grid grid-cols-3 gap-3 pt-2 text-center text-xs">
+      <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+        <span class="text-slate-500 block">Drinks & Alcohol</span>
+        <span class="font-bold mono text-sm text-slate-900">LKR 58,008.00</span>
+        <span class="text-[10px] text-slate-400 block mt-0.5">84.0% of total</span>
+      </div>
+      <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+        <span class="text-slate-500 block">Transport</span>
+        <span class="font-bold mono text-sm text-slate-900">LKR 5,074.00</span>
+        <span class="text-[10px] text-slate-400 block mt-0.5">7.3% of total</span>
+      </div>
+      <div class="p-3 bg-slate-50 rounded-xl border border-slate-200">
+        <span class="text-slate-500 block">Entrance Fees</span>
+        <span class="font-bold mono text-sm text-slate-900">LKR 6,000.00</span>
+        <span class="text-[10px] text-slate-400 block mt-0.5">8.7% of total</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div id="toast" class="fixed bottom-5 right-5 bg-slate-900 text-white text-xs px-4 py-2.5 rounded-lg shadow-xl opacity-0 transition-opacity duration-300 pointer-events-none z-50">
+    Copied to clipboard
+  </div>
+
+  <script>
+    function copySummaryText() {
+      const text = `🌴 SEETHA KAMARE OUTING — FINAL SETTLEMENT STATEMENT
+
+Total Outing Cost: LKR 69,082.00
+
+REQUIRED DIRECT TRANSFERS:
+1. Rashini  → pays Bhagya   : LKR 13,176.35
+2. Dinesh   → pays Bhagya   : LKR 10,820.60
+3. Piyumi   → pays Bhagya   : LKR 6,746.70
+4. Piyumi   → pays Tharusha : LKR 8,277.65
+
+MEMBER BALANCES:
+• Bhagya   : Paid LKR 45,768.00 | Share LKR 15,024.35 | Net: +LKR 30,743.65 (Reimburse)
+• Tharusha : Paid LKR 14,770.00 | Share LKR 6,492.35  | Net: +LKR 8,277.65 (Reimburse)
+• Rashini  : Paid LKR 1,848.00  | Share LKR 15,024.35 | Net: -LKR 13,176.35
+• Dinesh   : Paid LKR 6,696.00  | Share LKR 17,516.60 | Net: -LKR 10,820.60
+• Piyumi   : Paid LKR 0.00      | Share LKR 15,024.35 | Net: -LKR 15,024.35`;
+
+      navigator.clipboard.writeText(text).then(() => {
+        const toast = document.getElementById('toast');
+        toast.classList.remove('opacity-0');
+        toast.classList.add('opacity-100');
+        setTimeout(() => {
+          toast.classList.remove('opacity-100');
+          toast.classList.add('opacity-0');
+        }, 2200);
+      });
+    }
+  </script>
+</body>
+</html>
